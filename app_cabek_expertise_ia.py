@@ -919,7 +919,7 @@ with st.sidebar:
 
     st.markdown("**Modèles**")
     chemin_pieces = st.text_input("Modèle pièces (.pt)", value="best_pieces.pt")
-    chemin_dommages = st.text_input("Modèle dommages (.pt)", value="best_degats_v2.pt")
+    chemin_dommages = st.text_input("Modèle dommages (.pt)", value="best.pt")
 
     st.markdown("**Seuils de détection**")
     conf_pieces = st.slider("Confiance — pièces", 0.05, 0.95, 0.25, 0.05)

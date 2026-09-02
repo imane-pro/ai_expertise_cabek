@@ -80,6 +80,7 @@ BAREME_MET_DH = {
 }
 
 
+
 # ══════════════════════════════════════════════════════════════
 # 4. REGISTRE DES PIÈCES — fait le lien entre UNE pièce "canonique"
 #    et sa clé dans CHACUN des 3 tableaux (les granularités diffèrent
@@ -227,8 +228,8 @@ def calculer_cout_dommage(piece_ai: str, type_dommage: str, niveau_gravite: str)
     if prix_met is None:
         manquants.append("prix MET")
 
-    cout_reparation = heures_rep * TARIF_HORAIRE_DH if heures_rep is not None else 0
-    cout_mop        = heures_mop * TARIF_HORAIRE_DH if heures_mop is not None else 0
+    cout_reparation = heures_rep * TARIF_REPARATION_DH if heures_rep is not None else 0
+    cout_mop        = heures_mop * TARIF_MOP_DH if heures_mop is not None else 0
     cout_met        = prix_met if prix_met is not None else 0
 
     resultat = {
